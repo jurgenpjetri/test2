@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekti i Filozofisë</title>
+    <style>
+        /* CSS për stilizimin e faqes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .podcast, .libri {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .podcast img, .libri img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .podcast-description, .libri-description {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .highlighted {
+            background-color: #f9c74f;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Projekti i Filozofisë</h1>
+        <p>Një udhëtim në filozofi dhe mendimin kritik</p>
+    </header>
+
+    <nav>
+        <a href="#podcast" onclick="scrollToSection('podcast')">Podcast</a>
+        <a href="#libri" onclick="scrollToSection('libri')">Libri</a>
+        <a href="#puna" onclick="scrollToSection('puna')">Puna dhe Aktivitetet</a>
+    </nav>
+
+    <div class="content">
+        <section id="podcast" class="section">
+            <h2>Podcasti</h2>
+            <div class="podcast" onmouseover="highlightSection(this)" onmouseout="removeHighlight(this)">
+                <img src="C:\Users\jpjet\Downloads\projekt filozofia\projekt-filozofia\Gear-Podcast-Gear-1327244548.jpg" alt="Podcasti">
+                <div class="podcast-description">
+                    <h3>Podcasti i Filozofisë</h3>
+                    <p>Ky podcast është krijuar për të diskutuar temat kryesore të filozofisë dhe për të ndarë ide me dëgjuesit për përmbajtjet e ndryshme filozofike.</p>
+                    <a href= "C:\Users\jpjet\Downloads\projekt filozofia\projekt-filozofia\index1.html"target="_blank">Dëgjo Podcastin</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="libri" class="section">
+            <h2>Libri i Filozofisë</h2>
+            <div class="libri" onmouseover="highlightSection(this)" onmouseout="removeHighlight(this)">
+                <img src="C:\Users\jpjet\Downloads\projekt filozofia\projekt-filozofia\book-composition-with-open-book_23-2147690555.jpg" alt="Libri">
+                <div class="libri-description">
+                    <h3>Libri: The Philosophy of Ideas</h3>
+                    <p>Ky libër përmbledh disa nga konceptet më të rëndësishme filozofike dhe i ofron lexuesit një mundësi të thelluar për të kuptuar filozofinë.</p>
+                    <a href= "C:\Users\jpjet\Downloads\projekt filozofia\projekt-filozofia\index2.html"target="_blank">Lexo Librin</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="puna" class="section">
+            <h2>Puna dhe Aktivitetet</h2>
+            <p>Gjatë këtij projekti, kemi realizuar aktivitete të ndryshme si podcast, diskutime në grupe, dhe punime të tjera për të analizuar dhe shpjeguar ide filozofike.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Projekti i Filozofisë - Të drejtat e rezervuara</p>
+    </footer>
+
+    <script>
+        // Funksion për të rrotulluar në seksionin përkatës
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Funksioni për të ndryshuar ngjyrën e seksionit kur kalon mbi të
+        function highlightSection(element) {
+            element.classList.add('highlighted');
+        }
+
+        // Funksioni për të hequr ngjyrën e ndryshuar kur largohesh nga seksioni
+        function removeHighlight(element) {
+            element.classList.remove('highlighted');
+        }
+    </script>
+</body>
+</html>
